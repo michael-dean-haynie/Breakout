@@ -47,46 +47,6 @@ function renderBlocks(
 }
 
 
-// Ball moving
-function showBall(
-	xOff
-	,yOff
-	,color = config.board.ball.color
-	,size = config.board.ball.size
-	){
-
-	board.ctx.fillStyle = color;
-	board.ctx.fillRect(xOff, yOff, size, size);
-}
-
-function hideBall(
-	xOff
-	,yOff
-	,color = config.board.backgroundColor
-	,size = config.board.ball.size
-	){
-
-	board.ctx.fillStyle = color;
-	board.ctx.strokeStyle = color;
-	board.ctx.fillRect(xOff, yOff, size, size);
-	board.ctx.strokeRect(xOff, yOff, size, size);
-}
-
-function showMove(
-	xOffFrom
-	,yOffFrom
-	,xOffTo
-	,yOffTo
-	,colorFrom = config.board.backgroundColor
-	,colorTo = config.board.ball.color
-	,sizeFrom = config.board.ball.size
-	,sizeTo = config.board.ball.size
-	){
-
-	hideBall(xOffFrom, yOffFrom, colorFrom, sizeTo);
-	showBall(xOffTo, yOffTo, colorTo, sizeTo);
-}
-
 
 
 
